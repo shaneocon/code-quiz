@@ -40,3 +40,33 @@
   #introduction {
       font-weight: 700;
   }
+
+  .quiz-box {
+      width: 550px;
+      background: #fff;
+      border-radius: 5px;
+  }
+
+  .quiz-box header {
+      height: 70px;
+      padding: 0 30px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+      font-size: 25px;
+      font-weight: 500;
+  }
+  quiz-box header .timer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 150px;
+      height: 50px;
+      background: #333;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 0 10px;
+  }
