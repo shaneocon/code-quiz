@@ -4,7 +4,7 @@
 
 // Questions for QUIZ
     // True or False
-        // 1. All pirates have been men. (FALSE)
-        // 2. Captain Morgan was a real pirate. (TRUE)
-        // 3. Lemons are good for scurvy. (TRUE)
-        // 4. The Pirate Queen Ching Shih controlled a fleet of over 1,800 ships and 80,000 men. (TRUE)
+        // 1. Be Javascript included in Full-Stack Development? (TRUE)
+        // 2. Parantheses belong at th' beginnin' o' a function. (FALSE)
+        // 3. Quations declare th' end o' a statement in Javascript. (FALSE)
+        // 4. Lemons are good fer scurvy. (TRUE)
