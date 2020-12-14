@@ -1,7 +1,6 @@
 body,html{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    background-image: url(Images/weather.png);
     height: 100%;
 }
 .game-box{

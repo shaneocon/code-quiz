@@ -18,9 +18,11 @@ var alert = document.querySelector("#alert");
 var info = document.querySelector("#info");
 
 
+var allScores = [];
+var storedScores = JSON.parse(localStorage.getItem("userData"));
 
 // QUESTIONS 
-var questions = [
+var myQuestions = [
     {
         question: "Inside which HTML element do we put th' JavaScript?",
         options: ["<script>", "<js>", "<ahoy>"],
@@ -29,19 +31,43 @@ var questions = [
     {
         question: "Wha' be JavaScript?",
         options: ["Programming Language", "Markup Language", "Pirate Language"],
-        answer: "<script>"
-    }
+        answer: "Programming Language"
+    },
     {
         question: "In programmin', th' way ye save a value fer later use be by storin' it in a: ?",
         options: ["sea shanty", "database", "variable"],
         answer: "variable"
-    }
+    },
     {
-        question: "Guess the rest of the name of this classic sea shanty: Now you're ready to sail for the Horn / Weigh, hey, roll and go! / Our boots and our clothes, boys, are all in the pawn / To be rollicking Randy Dandy, oh:", 
-        options: ["Fish in the Sea", "Spanish Landies", "Randy Dandy-O"],
+        question: "Guess the name of this classic sea shanty: Now you're ready to sail for the Horn / Weigh, hey, roll and go! / Our boots and our clothes, boys, are all in the pawn / To be rollicking Randy Dandy, oh:", 
+        options: ["Fish in the Sea", "Spanish Landies", "Randy Dandy-Oh"],
         answer: "<script>"
     }
 ]
+
+startBtn.addEventListener("click", startQuiz);
+function startQuiz() {
+    if(storedScores !==null) {
+        allScores = storedScores;
+    }
+    // btnStart.classList.add("d-none")
+    // timecounter.classList.remove("d-none")
+    // quizQuestions.classList.remove("d-none")
+    // nextQuestions= questions[currentindex]
+    // console.log(nextQuestions.title)
+
+    nextQuestions = myQuestions[currentIndex]
+
+        displayQuestion(nextQuestions)
+
+    gameplay()
+}
+
+
+
+
+
+
 
 
 
@@ -131,12 +157,7 @@ startBtn.addEventListener("click", function(){
 //     </div>
 // </div>
 
-// Questions for QUIZ
-    // True or False
-        // 1. Be Javascript included in Full-Stack Development? (TRUE)
-        // 2. Parantheses belong at th' beginnin' o' a function. (FALSE)
-        // 3. Quations declare th' end o' a statement in Javascript. (FALSE)
-        // 4. Lemons are good fer scurvy. (TRUE)
+
 
 
 
