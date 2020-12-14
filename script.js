@@ -1,6 +1,13 @@
 // VARIABLES USED 
+var startBtn = document.querySelector("#start")
+
+
 
 // FUNCTIONS USED
+
+
+// EVENT LISTENERS
+startBtn.addEventListener()
 
 // Questions for QUIZ
     // True or False

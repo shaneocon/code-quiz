@@ -1,170 +1,30 @@
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        
-    }
+body,html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-image: url(Images/weather.png);
+    height: 100%;
+}
+.game-box{
+    background: #eeeeee;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0.,0,0,0.23);
+}
+.answer-item{
+    background: rgb(223, 201, 7);
+    width: 90%;
+    display: inline-block;
+    border-radius:8px;
+    padding: 3px;
+}
+#btn-start{
+    border:none;
+	padding:6px 0 6px 0;
+	border-radius:8px;
+	background:#1645c7;
+    font:bold 40px;
+	color:#fff;
+}
 
-    h1 {
-        text-align: center;
-        margin-top: 50px;
-        border: solid;
-        border-color: black;
-        background-color: seagreen;
-        color: white; 
-    }
-
-    .startBtn {
-        text-align: center;
-        padding-top: 33px;
-        margin: 10px;   
-    }
-
-    .startBtn button {
-        font-size: 25px;
-        font-weight: 500;
-        color: rgb(122, 122, 252);
-        padding: 15px 30px;
-        outline: none;
-        border: none;
-        border-radius: 5px;
-        background: #333;
-
-    }
-
-    #homepage-text {
-        font-weight: 700;
-    }
-
-    #introduction {
-        font-weight: 700;
-    }
-
-    .quiz-box {
-        width: 550px;
-        background: #fff;
-        border-radius: 5px;
-    }
-
-    .quiz-box header {
-        height: 70px;
-        padding: 0 30px;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 5px 5px 0 0;
-        box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
-        font-size: 25px;
-        font-weight: 500;
-    }
-    .quiz-box header .timer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 150px;
-        height: 50px;
-        background: white;
-        border: 1px solid white;
-        border-radius: 5px;
-        padding: 0 10px;
-    }
-    .quiz-box header .timer .timer-sec {
-        font-size: 20px;
-        font-weight: 600;
-        background: rgb(87, 87, 207);
-        color: whitesmoke;
-        height: 30px;
-        width: 50px;
-        text-align: center;
-        line-height: 20px;
-        border-radius: 10px;
-        border: 2px solid lightgrey;
-    }
-
-    .quiz-box section {
-        padding: 25px 30px 20px 30px;
-        background-color: #fff;
-    }
-
-    .quiz-box section .question-text {
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .quiz-box section .option-list {
-        padding: 25px 0;
-        display: block;
-    }
-
-    section .option-list option {
-        background: ;
-        border: 1px #333;
-        border-radius: 5px;
-        padding: 8px 15px;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 18px;
-    }
-
-    .option-list .option .icon {
-        height: 25px;
-        width: 25px;
-        text-align: center;
-        
-    }
-
-    .option-list .option .icon.tick {
-        color: #239023;
-        border-color: #23903c;
-        background: white;
-    }
-
-    .option-list .option .icon.cross {
-        color: red;
-        border-color: darkred;
-        background: white;
-
-    }
-
-    .quiz-box footer {
-        height: 60px;
-        width: 100%;
-        padding: 0 30px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .quiz-box footer .total-questions span p{
-        font-weight: 600;
-        padding: 0 5px;
-        font-size: 14px;
-    }
-
-    .total-questions span p:first-child {
-        padding-left: 0px;
-    }
-
-    footer .next-btn {
-        height: 40px;
-        padding: 0 13px;
-        font-size: 20px;
-        font-weight: 400;
-        color: #fff;
-        background: hsl(211, 100%, 50%);
-        border: 1px solid #333;
-        cursor: pointer;
-
-    }
-    
-
-    .result-box {
-        background: #fff;
-        
-    }
-
-
+#code-title{
+    text-align: center;
+    font-weight: bold;
+}
