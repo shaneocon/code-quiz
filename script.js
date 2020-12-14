@@ -19,11 +19,46 @@ var info = document.querySelector("#info");
 
 
 
+// QUESTIONS 
+var questions = [
+    {
+        question: "Inside which HTML element do we put th' JavaScript?",
+        options: ["<script>", "<js>", "<ahoy>"],
+        answer: "<script>"
+    },
+    {
+        question: "Wha' be JavaScript?",
+        options: ["Programming Language", "Markup Language", "Pirate Language"],
+        answer: "<script>"
+    }
+    {
+        question: "In programmin', th' way ye save a value fer later use be by storin' it in a: ?",
+        options: ["sea shanty", "database", "variable"],
+        answer: "variable"
+    }
+    {
+        question: "Guess the rest of the name of this classic sea shanty: Now you're ready to sail for the Horn / Weigh, hey, roll and go! / Our boots and our clothes, boys, are all in the pawn / To be rollicking Randy Dandy, oh:", 
+        options: ["Fish in the Sea", "Spanish Landies", "Randy Dandy-O"],
+        answer: "<script>"
+    }
+]
+
+
+
 
 
 
 
 // FUNCTIONS USED
+
+function gameplay() {
+
+    var timeInterval = setInterval(function(){
+        timer.innerText = count
+        count--;
+    }, 1000);
+}
+
 
 
 // EVENT LISTENERS
