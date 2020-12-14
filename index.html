@@ -15,21 +15,23 @@
     <body>
         <div class= "container game-box">
 
-            <div class= "header-row">
-                <div class= "col-md-6">
+            <div class= "row">
+                <div class= "col-md-12">
                     <h1>Ahoy t' th' Sea o' Code Quiz!</h1>
                 </div>
-                <hr>
-                <div class="col-md-6">
+            </div>
+            <br><hr>
+            <div class="row">
+                <div class="col-md-8">
                     <h2>This quiz be not for the faint of heart!</h2>
                 </div>
                 <br>
-                <div class="col-md-12">
-                    <h4 class="text-primary d-none" id="timecounter">Timer: <span id="timer">75</span></h4>
+                <div class="col-md-4">
+                    <h4 class="text-primary" id="timecounter" style="opacity: 1;">Timer: <span id="timer">75</span></h4>
 
                 </div>
             </div>
-            <div class= "quiz-questions d-none" id="quiz-questions"> 
+            <div class= "quiz-questions" id="quiz-questions"> 
                 <h2 class="text-info text-center" id="title-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
                 <div class="answers mt-5 mb-5" id="question-answers"></div>
                 <h1 id="alert"></h1>
@@ -50,7 +52,7 @@
                 <input type="text" class="form-control" placeholder="Board yer initials here:"
                 id="inputScore">
                 <div class="input-group-append">
-                    <button class="input-group-text btn btn-primary" id="btnScore">Submit</button>
+                    <button class="input-group-text btn btn-primary" id="scoreBtn">Submit</button>
                 </div>
             </div>
         </div>

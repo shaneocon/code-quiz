@@ -1,22 +1,24 @@
 // VARIABLES USED 
-var startBtn = document.querySelector("#start");
+var quizQuestions = document.querySelector("#quiz-questions");
 var timer = document.querySelector("#timer");
 var startBtn = document.querySelector("#start");
 var timeCounter = document.querySelector("#timecounter");
 var titleItem = document.querySelector("#title-item");
 
-var nextQuestions
+var timeInterval;
 
-var questionsAnswers = document.querySelector("#question-answers");
+var nextQuestions;
+
+var questionAnswers = document.querySelector("#question-answers");
 var myScore = document.querySelector("#score");
-var btnScore = document.querySelector("#btnScore");
+var scoreBtn = document.querySelector("#scoreBtn");
 
 var currentIndex = 0;
 var score = 0;
-var count = 75; 
+var count = 75;
+
 var alert = document.querySelector("#alert");
 var info = document.querySelector("#info");
-
 
 var allScores = [];
 var storedScores = JSON.parse(localStorage.getItem("userData"));
@@ -63,17 +65,11 @@ function startQuiz() {
     gameplay()
 }
 
+scoreBtn.addEventListener("click", function(){
+    var name = document.querySelector("#inputScore").value
+    scorePage(name, count)
 
-
-
-
-
-
-
-
-
-
-
+});
 
 // FUNCTIONS USED
 
@@ -85,6 +81,22 @@ function gameplay() {
     }, 1000);
 }
 
+function displayQuestion(question) {
+    titleItem.textContent=question.question
+    question.choices.forEach()
+
+}
+// WHAT IS THIS FUNCTION DOING?-----------------------------------------
+// function displayQuestion(question) QUESTION IS THE USER SET PARAMETER FOR THE FUNCTION?{
+//     titleitem.innerText=question.title
+//     question.choices.forEach(element => {
+//      var button =document.createElement("button")
+//     button.className="btn-primary btn-block text-left"
+//     button.innerText=element
+//     // questionanswers.innerHTML=""
+//     questionanswers.appendChild(button)
+//     button.addEventListener("click", displaynextQuestion)
+//     });
 
 
 // EVENT LISTENERS
