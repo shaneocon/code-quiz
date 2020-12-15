@@ -59,7 +59,10 @@ function startQuiz() {
     timeCounter.style.display="block";
     timer.style.display="block";
     nextQuestions= myQuestions[currentIndex];
-    console.log(nextQuestions.question)
+
+        displayQuestion(nextQuestions);
+    
+    gameplay();
 
     // titleItem.textContent=myQuestions.question1
     var timeInterval = setInterval(function() {
@@ -93,6 +96,7 @@ function startQuiz() {
 // FUNCTIONS USED
 
  function gameplay() {
+
 // 
 }
      
@@ -124,6 +128,15 @@ scoreBtn.addEventListener("click", function(){
     scorePage(name, count)
 
 });
+
+function endgame (){
+    // btnStart.classList.add("d-none")
+    myScore.innaText = count;
+    addScore.style.display="block";
+    timecounter.style.display="none";
+    quizQuestions.style.display="none";
+}
+
 
 
 
