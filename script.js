@@ -1,8 +1,8 @@
 // VARIABLES USED 
-var quizQuestions = document.querySelector("#quiz-questions");
+var quizQuestions = document.getElementById("quiz-questions");
 var timer = document.querySelector("#timer");
-var startBtn = document.querySelector("#start");
-var timeCounter = document.querySelector("#timecounter");
+var startBtn = document.getElementById("start");
+var timeCounter = document.getElementById("timecounter");
 var titleItem = document.querySelector("#title-item");
 
 var timeInterval;
@@ -23,18 +23,23 @@ var info = document.querySelector("#info");
 var allScores = [];
 var storedScores = JSON.parse(localStorage.getItem("userData"));
 
+var gameStart = document.querySelector(".game-start");
+quizQuestions.style.display="none";
+
 // QUESTIONS 
 var myQuestions = [
-    {
+    {  
         question: "Inside which HTML element do we put th' JavaScript?",
-        options: ["<script>", "<js>", "<ahoy>"],
+        option: ["<script>", "<js>", "<ahoy>"],
         answer: "<script>"
     },
+
     {
         question: "Wha' be JavaScript?",
         options: ["Programming Language", "Markup Language", "Pirate Language"],
         answer: "Programming Language"
     },
+
     {
         question: "In programmin', th' way ye save a value fer later use be by storin' it in a: ?",
         options: ["sea shanty", "database", "variable"],
@@ -46,46 +51,57 @@ var myQuestions = [
         answer: "<script>"
     }
 ]
-
-startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
-    if(storedScores !==null) {
-        allScores = storedScores;
-    }
-    // btnStart.classList.add("d-none")
-    // timecounter.classList.remove("d-none")
-    // quizQuestions.classList.remove("d-none")
-    // nextQuestions= questions[currentindex]
-    // console.log(nextQuestions.title)
+    
+    console.log("click");
+    gameStart.style.display="none";
+    quizQuestions.style.display="block";
+    timeCounter.style.display="block";
+    timer.style.display="block";
+    nextQuestions= myQuestions[currentIndex];
+    console.log(nextQuestions.question)
 
-    nextQuestions = myQuestions[currentIndex]
+    // titleItem.textContent=myQuestions.question1
+    var timeInterval = setInterval(function() {
+            count--;
+        }, 1000);
 
-        displayQuestion(nextQuestions)
 
-    gameplay()
+    // timeCounter = setInterval(Countdown, 75000)
+
+    
+    
+    
+    // if(storedScores !==null) {
+    //     allScores = storedScores;
+    // }
+    // // btnStart.classList.add("d-none")
+    // // timecounter.classList.remove("d-none")
+    // // quizQuestions.classList.remove("d-none")
+    // // nextQuestions= questions[currentindex]
+    // // console.log(nextQuestions.title)
+
+    // nextQuestions = myQuestions[currentIndex]
+
+    //     // displayQuestion(nextQuestions)
+
+    // gameplay()
 }
 
-scoreBtn.addEventListener("click", function(){
-    var name = document.querySelector("#inputScore").value
-    scorePage(name, count)
-
-});
+// function Coundown (){};
 
 // FUNCTIONS USED
 
-function gameplay() {
-
-    var timeInterval = setInterval(function(){
-        timer.innerText = count
-        count--;
-    }, 1000);
+ function gameplay() {
+// 
 }
+     
 
-function displayQuestion(question) {
-    titleItem.textContent=question.question
-    question.choices.forEach()
+// function displayQuestion(question) {
+//     titleItem.textContent=question.question
+//     question.choices.forEach()
 
-}
+//     }
 // WHAT IS THIS FUNCTION DOING?-----------------------------------------
 // function displayQuestion(question) QUESTION IS THE USER SET PARAMETER FOR THE FUNCTION?{
 //     titleitem.innerText=question.title
@@ -100,14 +116,14 @@ function displayQuestion(question) {
 
 
 // EVENT LISTENERS
-startBtn.addEventListener("click", function(){
+startBtn.addEventListener("click", startQuiz); 
+    
 
-})
+scoreBtn.addEventListener("click", function(){
+    var name = document.querySelector("#inputScore").value
+    scorePage(name, count)
 
-
-
-
-
+});
 
 
 

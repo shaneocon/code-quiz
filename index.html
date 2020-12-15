@@ -22,30 +22,34 @@
             </div>
             <br><hr>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 game-start">
                     <h2>This quiz be not for the faint of heart!</h2>
+                    <div class="col-md-12 gamestartBtn">
+                        <p id="info">A few things t' think on 'fore starting this here quiz:
+                                <ul id="introduction">
+                                    <li>Beware the timer, it begins with 75 seconds but with each incorrect answer, ye drop 15 seconds closer to Davey Jones.</li><br>
+                                    <li>Avast, ye land lubbers! It be too late to alter course, matey. Test yer knowledge o' th' language o' Javascript...or walk the plank.</li>
+                                </ul>
+                        </p>
+                        <button id="start" class="btn btn-primary btn-lg">Abandon all hope, ye who enter here.</button>
+                    </div>
                 </div>
                 <br>
                 <div class="col-md-4">
-                    <h4 class="text-primary" id="timecounter" style="opacity: 1;">Timer: <span id="timer">75</span></h4>
+                    <h4 display="none" class="text-primary" id="timecounter">Timer: <span id="timer">75</span></h4>
 
                 </div>
             </div>
-            <div class= "quiz-questions" id="quiz-questions"> 
-                <h2 class="text-info text-center" id="title-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                <div class="answers mt-5 mb-5" id="question-answers"></div>
+
+            <div display="none" class="quiz-questions" id="quiz-questions" > 
+                <h2 class="text-info text-center" id="title-item">Hello, World!</h2>
+                <div class="answers mt-5 mb-5" id="question-answers-0"></div>
+                <div class="answers mt-5 mb-5" id="question-answers-1"></div>
+                <div class="answers mt-5 mb-5" id="question-answers-2"></div>
                 <h1 id="alert"></h1>
             </div>
             
-            <div class="col-md-12 gamestartBtn">
-                <p id="info">A few things t' think on 'fore starting this here quiz:
-                        <ul id="introduction">
-                            <li>Beware the timer, it begins with 75 seconds but with each incorrect answer, ye drop 15 seconds closer to Davey Jones.</li><br>
-                            <li>Avast, ye land lubbers! It be too late to alter course, matey. Test yer knowledge o' th' language o' Javascript...or walk the plank.</li>
-                        </ul>
-                </p>
-                <button id="start" class="btn btn-primary btn-lg">Abandon all hope, ye who enter here.</button>
-            </div>
+            
 
             <div class= "input-group d-none" id="addScore">
                 <h5 class="d-block"><span id="score"></span></h5>
