@@ -51,7 +51,22 @@ var myQuestions = [
         answer: "<script>"
     }
 ]
+startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
+
+    function displayQuestion(question) {
+        // QUESTION IS THE USER SET PARAMETER FOR THE FUNCTION?
+        console.log({ question });
+        document.getElementById('title-item').innerText = question.question;
+        question.option.forEach((element) => {
+          var button = document.createElement('button');
+          button.className = 'btn-primary btn-block text-left';
+          button.innerText = element;
+          // questionanswers.innerHTML=""
+          document.getElementById('quiz-questions').appendChild(button);
+          button.addEventListener('click', () => {}); 
+        });
+      }
     
     console.log("click");
     gameStart.style.display="none";
@@ -60,15 +75,23 @@ function startQuiz() {
     timer.style.display="block";
     nextQuestions= myQuestions[currentIndex];
 
+      
+
+    var timeInterval = setInterval(function() {
+        count--;
+        timer.textContent = count
+    }, 1000);  
+
+
         displayQuestion(nextQuestions);
     
     gameplay();
 
     // titleItem.textContent=myQuestions.question1
-    var timeInterval = setInterval(function() {
-            count--;
-        }, 1000);
 
+    // function gametime(){
+       
+    
 
     // timeCounter = setInterval(Countdown, 75000)
 
@@ -91,6 +114,26 @@ function startQuiz() {
     // gameplay()
 }
 
+
+function checkCorrectAnswer(response){
+    
+    if(response){
+        alert.innerText= "Good"
+        console.log("Good")
+    }else {
+        alert.innerText="Wrong"
+        count = count -15
+        timer.innerHTML = count
+        console.log("Wrong")
+
+    }
+    setTimeout(function(){
+        alert.innerText=""
+    
+        }, 1000);
+
+}
+
 // function Coundown (){};
 
 // FUNCTIONS USED
@@ -103,7 +146,14 @@ function startQuiz() {
 
 // function displayQuestion(question) {
 //     titleItem.textContent=question.question
-//     question.choices.forEach()
+//     question.choices.forEach()(element => {
+//              var button =document.createElement("button")
+//             button.className="btn-primary btn-block text-left"
+//             button.innerText=element
+//             // questionanswers.innerHTML=""
+//             questionanswers.appendChild(button)
+//             button.addEventListener("click", displaynextQuestion)
+//         });
 
 //     }
 // WHAT IS THIS FUNCTION DOING?-----------------------------------------
@@ -120,22 +170,22 @@ function startQuiz() {
 
 
 // EVENT LISTENERS
-startBtn.addEventListener("click", startQuiz); 
+ 
     
 
-scoreBtn.addEventListener("click", function(){
-    var name = document.querySelector("#inputScore").value
-    scorePage(name, count)
+// // scoreBtn.addEventListener("click", function(){
+// //     var name = document.querySelector("#inputScore").value
+// //     scorePage(name, count)
 
-});
+// });
 
-function endgame (){
-    // btnStart.classList.add("d-none")
-    myScore.innaText = count;
-    addScore.style.display="block";
-    timecounter.style.display="none";
-    quizQuestions.style.display="none";
-}
+// function endgame (){
+//     // btnStart.classList.add("d-none")
+//     myScore.innaText = count;
+//     addScore.style.display="block";
+//     timecounter.style.display="none";
+//     quizQuestions.style.display="none";
+//     addScore.style.display="block";
 
 
 
@@ -285,4 +335,4 @@ function endgame (){
         //             <span><p>4</p><p>Of</p><p>4</p><p>Riddles</p></span>
         //         </div>
         //         <button class="next-btn">Next Riddle</button>
-        //     </footer>
+            // </footer
