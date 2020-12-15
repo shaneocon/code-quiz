@@ -33,7 +33,7 @@ quizQuestions.style.display="none";
 var myQuestions = [
     {  
         question: "Inside which HTML element do we put th' JavaScript?",
-        option: ["<script>", "<js>", "<ahoy>"],
+        options: ["<script>", "<js>", "<ahoy>"],
         answer: "<script>"
     },
 
@@ -54,6 +54,8 @@ var myQuestions = [
         answer: "<script>"
     }
 ]
+
+
 startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
 
@@ -61,7 +63,7 @@ function startQuiz() {
         
         console.log({ question });
         document.getElementById('title-item').textContent = question.question;
-        question.option.forEach((element) => {
+        question.options.forEach((element) => {
           var button = document.createElement('button');
           button.className = 'btn-primary btn-block text-left';
           button.innerText = element;
@@ -105,6 +107,7 @@ function startQuiz() {
     
 }
 
+
 function displayNextQuestion(e) {
     currentIndex++
     if (currentIndex < myQuestions.length) {
@@ -127,13 +130,13 @@ function displayNextQuestion(e) {
 function checkCorrectAnswer(response){
     
     if(response){
-        alert.innerText= "Good"
-        console.log("Good")
+        alert.innerText= "Correct"
+        console.log("Incorrect")
     }else {
-        alert.innerText="Wrong"
+        alert.innerText="Incorrect"
         count = count -15
         timer.innerHTML = count
-        console.log("Wrong")
+        console.log("Incorrect")
 
     }
     setTimeout(function(){
@@ -143,11 +146,15 @@ function checkCorrectAnswer(response){
 
 }
 
+
+
 // function Coundown (){};
 
 // FUNCTIONS USED
 
  function gameplay() {
+
+    
 
 // 
 }
