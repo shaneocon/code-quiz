@@ -9,7 +9,7 @@ var timeInterval;
 
 var nextQuestions;
 
-var correctAnswer;
+var correctAnswer = ["<script>", "Programming Language", "variable", "Randy Dandy-Oh"]
 
 
 var questionAnswers = document.querySelector("#question-answers");
@@ -51,7 +51,7 @@ var myQuestions = [
     {
         question: "Guess the name of this classic sea shanty: Now you're ready to sail for the Horn / Weigh, hey, roll and go! / Our boots and our clothes, boys, are all in the pawn / To be rollicking Randy Dandy, oh:", 
         options: ["Fish in the Sea", "Spanish Landies", "Randy Dandy-Oh"],
-        answer: "<script>"
+        answer: "Randy Dandy-Oh"
     }
 ]
 
@@ -85,8 +85,10 @@ function startQuiz() {
       
 
         var timeInterval = setInterval(function() {
+
             count--;
             timer.textContent = count
+            
         }, 1000);  
 
 
@@ -108,10 +110,10 @@ function startQuiz() {
 }
 
 
-function displayNextQuestion(e) {
+function displayNextQuestion(event) {
     currentIndex++
     if (currentIndex < myQuestions.length) {
-        chceckCorrectAnswer(e.target.textContent == nextQuestions.answer);
+        checkCorrectAnswer(event.target.textContent == nextQuestions.answer);
         questionAnswers.textContent="";
         if(currentIndex < myQuestions.length) {
             nextQuestions= myQuestions[currentIndex]
@@ -129,9 +131,9 @@ function displayNextQuestion(e) {
 
 function checkCorrectAnswer(response){
     
-    if(response){
-        alert.innerText= "Correct"
-        console.log("Incorrect")
+    if(response===correctAnswer){
+        alert.innerText="Correct"
+        console.log("Correct")
     }else {
         alert.innerText="Incorrect"
         count = count -15
@@ -170,7 +172,7 @@ function checkCorrectAnswer(response){
 // });
 
 // function endgame (){
-//     // btnStart.classList.add("d-none")
+//     // btnStart.style.display="none"
 //     myScore.innaText = count;
 //     addScore.style.display="block";
 //     timecounter.style.display="none";
