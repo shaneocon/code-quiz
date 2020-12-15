@@ -60,7 +60,7 @@ function startQuiz() {
     function displayQuestion(question) {
         
         console.log({ question });
-        document.getElementById('title-item').innerText = question.question;
+        document.getElementById('title-item').textContent = question.question;
         question.option.forEach((element) => {
           var button = document.createElement('button');
           button.className = 'btn-primary btn-block text-left';
@@ -105,6 +105,24 @@ function startQuiz() {
     
 }
 
+function displayNextQuestion(e) {
+    currentIndex++
+    if (currentIndex < myQuestions.length) {
+        chceckCorrectAnswer(e.target.textContent == nextQuestions.answer);
+        questionAnswers.textContent="";
+        if(currentIndex < myQuestions.length) {
+            nextQuestions= myQuestions[currentIndex]
+            displayQuestion(nextQuestions)
+        }else {
+            currentIndex = 0;
+            displayQuestion(nextQuestions);
+        }
+    }else{
+        console.log("endgame")
+        endgame()
+
+    }
+}
 
 function checkCorrectAnswer(response){
     
@@ -135,32 +153,6 @@ function checkCorrectAnswer(response){
 }
      
 
-// function displayQuestion(question) {
-//     titleItem.textContent=question.question
-//     question.choices.forEach()(element => {
-//              var button =document.createElement("button")
-//             button.className="btn-primary btn-block text-left"
-//             button.innerText=element
-//             // questionanswers.innerHTML=""
-//             questionanswers.appendChild(button)
-//             button.addEventListener("click", displaynextQuestion)
-//         });
-
-//     }
-// WHAT IS THIS FUNCTION DOING?-----------------------------------------
-// function displayQuestion(question) QUESTION IS THE USER SET PARAMETER FOR THE FUNCTION?{
-//     titleitem.innerText=question.title
-//     question.choices.forEach(element => {
-//      var button =document.createElement("button")
-//     button.className="btn-primary btn-block text-left"
-//     button.innerText=element
-//     // questionanswers.innerHTML=""
-//     questionanswers.appendChild(button)
-//     button.addEventListener("click", displaynextQuestion)
-//     });
-
-
-// EVENT LISTENERS
  
     
 
