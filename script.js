@@ -9,6 +9,8 @@ var timeInterval;
 
 var nextQuestions;
 
+var correctAnswer;
+
 
 var questionAnswers = document.querySelector("#question-answers");
 var myScore = document.querySelector("#score");
@@ -64,8 +66,9 @@ function startQuiz() {
           button.className = 'btn-primary btn-block text-left';
           button.innerText = element;
           // questionanswers.innerHTML=""
+          
           questionAnswers.appendChild(button);
-          button.addEventListener('click', () => {}); 
+          button.addEventListener('click', (element) => {checkCorrectAnswer(element)}); 
         });
     }
 
@@ -177,150 +180,3 @@ function checkCorrectAnswer(response){
 
 
 
-
-
-// <!-- PAGE 2 HTML --------------------------------------------------------------------->
-// <!-- Quiz Box ------------------------------------------------------------------------>
-
-// <!-- Quiz Box Header -------------------------->
-// <div class="quiz-box">
-//     <header>
-//         <div class="title">Ahoy! This be the Coding Sea.</div>
-//         <div class="timer">
-//             <div class="time-text">Time Left:</div>
-//             <div class="timer-sec">75</div>
-//         </div>
-//     </header>
-
-//     <!-- Question 1--------------------------->
-//     <section>
-//         <div class="question-text">
-//             <span>Be Javascript included in Full-Stack Development?</span>
-//         </div>
-//         <div class="option-list">
-//             <div class="option">
-//                 <span>True</span>
-//                 <div class="icon tick"><i class="fas fa-check"></i></div>
-//             </div>
-
-//             <div class="option">
-//                 <span>False</span>
-//                 <div class="icon cross"><i class="fas fa-times"></i></div>
-//             </div>
-//         </div>
-//     </section>
-
-//     <!--QUIZ BOX FOOTER SECTION ------------------------->
-
-//     <footer>
-//         <div class="total-questions">
-//             <span><p>1</p><p>Of</p><p>4</p><p>Riddles</p></span>
-//         </div>
-//         <button class="next-btn">Next Riddle</button>
-//     </footer>
-// </div>
-
-
-// <!-- RESULT BOX ------------------------------------------->
-
-// <div class="result-box">
-//     <div class="icon">
-//         <i class="fas fa-crown"></i>
-//     </div>
-//     <div class="game-over-text">You've finished the quiz! Game over.</div>
-//     <div class="score-text">
-//         <span>You finished with <p>x</p>out of<p>4</p></span>
-//     </div>
-//     <div class="resetBtn">
-//         <button class="restart">Restart Quiz</button>
-//     </div>
-// </div>
-
-
-
-
-
-
-
-// THIS IS FURTHER HTML CODED THAT NEEDS TO BE DROPPED INTO INDEX.HTML
-
-        // <!-- Question 2 ---------------------------->
-        //     <section>
-        //         <div class="question-text">
-        //             <span>Parantheses belong at th' beginnin' o' a function.</span>
-        //         </div>
-        //         <div class="option-list">
-        //             <div class="option">
-        //                 <span>True</span>
-        //                 <div class="icon cross"><i class="fas fa-times"></i></div>
-        //             </div>
-
-        //             <div class="option">
-        //                 <span>False</span>
-        //                 <div class="icon tick"><i class="fas fa-check"></i></div>
-        //             </div>
-        //         </div>
-        //     </section>
-
-        //      <!--QUIZ BOX FOOTER SECTION ------------------------->
-
-        //      <footer>
-        //         <div class="total-questions">
-        //             <span><p>2</p><p>Of</p><p>4</p><p>Riddles</p></span>
-        //         </div>
-        //         <button class="next-btn">Next Riddle</button>
-        //     </footer>
-
-        //     <!-- Question 3 --------------------------->
-        //     <section>
-        //         <div class="question-text">
-        //             <span>Quotations declare th' end o' a statement in Javascript.</span>
-        //         </div>
-        //         <div class="option-list">
-        //             <div class="option">
-        //                 <span>True</span>
-        //                 <div class="icon cross"><i class="fas fa-times"></i></div>
-        //             </div>
-                
-        //             <div class="option">
-        //                 <span>False</span>
-        //                 <div class="icon tick"><i class="fas fa-check"></i></div>
-        //             </div>
-        //         </div>
-        //     </section>
-
-        //      <!--QUIZ BOX FOOTER SECTION ------------------------->
-
-        //      <footer>
-        //         <div class="total-questions">
-        //             <span><p>3</p><p>Of</p><p>4</p><p>Riddles</p></span>
-        //         </div>
-        //         <button class="next-btn">Next Riddle</button>
-        //     </footer>
-
-        //     <!-- Question 4 --------------------------->
-        //     <section>
-        //         <div class="question-text">
-        //             <span>Lemons are good fer scurvy.</span>
-        //         </div>
-        //         <div class="option-list">
-        //             <div class="option">
-        //                 <span>True</span>
-        //                 <div class="icon tick"><i class="fas fa-check"></i></div>
-        //             </div>
-                
-        //             <div class="option">
-        //                 <span>False</span>
-        //                 <div class="icon cross"><i class="fas fa-times"></i></div>
-        //             </div>
-        //         </div>
-        //     </section>
-
-        //      <!--QUIZ BOX FOOTER SECTION ------------------------->
-
-        //      <footer>
-        //         <div class="total-questions">
-        //             <span><p>4</p><p>Of</p><p>4</p><p>Riddles</p></span>
-        //         </div>
-        //         <button class="next-btn">Next Riddle</button>
-            // </footer
