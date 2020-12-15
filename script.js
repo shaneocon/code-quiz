@@ -9,6 +9,7 @@ var timeInterval;
 
 var nextQuestions;
 
+
 var questionAnswers = document.querySelector("#question-answers");
 var myScore = document.querySelector("#score");
 var scoreBtn = document.querySelector("#scoreBtn");
@@ -55,7 +56,7 @@ startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
 
     function displayQuestion(question) {
-        // QUESTION IS THE USER SET PARAMETER FOR THE FUNCTION?
+        
         console.log({ question });
         document.getElementById('title-item').innerText = question.question;
         question.option.forEach((element) => {
@@ -63,24 +64,25 @@ function startQuiz() {
           button.className = 'btn-primary btn-block text-left';
           button.innerText = element;
           // questionanswers.innerHTML=""
-          document.getElementById('quiz-questions').appendChild(button);
+          questionAnswers.appendChild(button);
           button.addEventListener('click', () => {}); 
         });
-      }
+    }
+
     
-    console.log("click");
-    gameStart.style.display="none";
-    quizQuestions.style.display="block";
-    timeCounter.style.display="block";
-    timer.style.display="block";
-    nextQuestions= myQuestions[currentIndex];
+        console.log("click");
+        gameStart.style.display="none";
+        quizQuestions.style.display="block";
+        timeCounter.style.display="block";
+        timer.style.display="block";
+        nextQuestions= myQuestions[currentIndex];
 
       
 
-    var timeInterval = setInterval(function() {
-        count--;
-        timer.textContent = count
-    }, 1000);  
+        var timeInterval = setInterval(function() {
+            count--;
+            timer.textContent = count
+        }, 1000);  
 
 
         displayQuestion(nextQuestions);
@@ -98,20 +100,6 @@ function startQuiz() {
     
     
     
-    // if(storedScores !==null) {
-    //     allScores = storedScores;
-    // }
-    // // btnStart.classList.add("d-none")
-    // // timecounter.classList.remove("d-none")
-    // // quizQuestions.classList.remove("d-none")
-    // // nextQuestions= questions[currentindex]
-    // // console.log(nextQuestions.title)
-
-    // nextQuestions = myQuestions[currentIndex]
-
-    //     // displayQuestion(nextQuestions)
-
-    // gameplay()
 }
 
 
