@@ -61,7 +61,7 @@ function startQuiz() {
 
     function displayQuestion(question) {
         
-        console.log({ question });
+        // console.log({ question });
         document.getElementById('title-item').textContent = question.question;
         question.options.forEach((element) => {
           var button = document.createElement('button');
@@ -72,7 +72,8 @@ function startQuiz() {
           questionAnswers.appendChild(button);
           
            
-          button.addEventListener('click', () => {checkCorrectAnswer(element === question.answer)}); 
+          button.addEventListener('click', () => {checkCorrectAnswer(element === question.answer)});
+           
         });
     }
 
@@ -87,9 +88,15 @@ function startQuiz() {
       
 
         var timeInterval = setInterval(function() {
-
-            count--;
-            timer.textContent = count
+            if (count > 0) {
+                count--;
+                timer.textContent = count
+            } else {
+                clearInterval(timeInterval);
+            }
+            
+            // count--;
+            // timer.textContent = count
             
         }, 1000);  
 
@@ -117,17 +124,15 @@ function displayNextQuestion(event) {
     if (currentIndex < myQuestions.length) {
         checkCorrectAnswer(event.target.textContent == nextQuestions.answer);
         questionAnswers.textContent="";
-        if(currentIndex < myQuestions.length) {
+         
             nextQuestions= myQuestions[currentIndex]
             displayQuestion(nextQuestions)
-        }else {
-            currentIndex = 0;
-            displayQuestion(nextQuestions);
-        }
+        
     }else{
         console.log("endgame")
         endgame()
-
+        currentIndex = 0;
+        displayQuestion(nextQuestions);
     }
 }
 
@@ -148,7 +153,10 @@ function checkCorrectAnswer(response){
     
         }, 1000);
 
+// displayNextQuestion();
 }
+
+// displayNextQuestion();
 
 
 
