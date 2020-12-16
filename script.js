@@ -33,8 +33,8 @@ quizQuestions.style.display="none";
 var myQuestions = [
     {  
         question: "Inside which HTML element do we put th' JavaScript?",
-        options: ["<script>", "<js>", "<ahoy>"],
-        answer: "<script>"
+        options: ["script", "js", "ahoy"],
+        answer: "script"
     },
 
     {
@@ -70,7 +70,9 @@ function startQuiz() {
           // questionanswers.innerHTML=""
           
           questionAnswers.appendChild(button);
-          button.addEventListener('click', (element) => {checkCorrectAnswer(element)}); 
+          
+           
+          button.addEventListener('click', () => {checkCorrectAnswer(element === question.answer)}); 
         });
     }
 
@@ -130,10 +132,10 @@ function displayNextQuestion(event) {
 }
 
 function checkCorrectAnswer(response){
-    
-    if(response===correctAnswer){
+   console.log(response)
+    if(response){
         alert.innerText="Correct"
-        console.log("Correct")
+        
     }else {
         alert.innerText="Incorrect"
         count = count -15
