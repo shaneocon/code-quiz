@@ -57,3 +57,4 @@ I was able to get the front page and start button working.  The answers on the f
 
 However, the rest of the quiz does not respond to the user's clicks.  I wish I had a reliable answer to my problem but I think my research skills have improved as a result of this work and I think that is really the crux of these assignments. 
 
+THE CODING SEA BE FULL FOUL IN ITS FURY!
