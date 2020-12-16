@@ -175,19 +175,13 @@ function checkCorrectAnswer(response){
  
     
 
-// // scoreBtn.addEventListener("click", function(){
-// //     var name = document.querySelector("#inputScore").value
-// //     scorePage(name, count)
-
-// });
-
-// function endgame (){
-//     // btnStart.style.display="none"
-//     myScore.innaText = count;
-//     addScore.style.display="block";
-//     timecounter.style.display="none";
-//     quizQuestions.style.display="none";
-//     addScore.style.display="block";
 
 
-
+function endgame (){
+    // btnStart.style.display="none"
+    myScore.innaText = count;
+    addScore.style.display="block";
+    timecounter.style.display="none";
+    quizQuestions.style.display="none";
+    addScore.style.display="block";
+}
