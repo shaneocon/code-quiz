@@ -53,7 +53,7 @@ Okay. So I didn't finish.  But damn I gave it my all.
 
 I spent north of 12 hours going through material both directly and indirectly related to the assignment. I worked with the BCS Learning Assistants, my instructor, and my classmates and I'm reasonably content with the results.  It irks me now and will irk me well past the end of class that I didn't finish but I tried my best and, really, that's all I can ask of myself. I learned A LOT during this assignment.   
 
-I was able to get the front page and start button working.  The answers on the first questions load the intended correct/incorrect value when the user selects their response. The timer begins upon clicking of the start button and ends stops when it reaches zero.
+I was able to get the front page and start button working.  The answers on the first question load the intended correct/incorrect value when the user selects their response. The timer begins upon clicking of the start button and stops when it reaches zero.
 
-However, the rest of the quiz does not respond to my clicks.  I wish I had a reliable answer to my problem but I think my research skills have improved as a result of this assignment and I think that is really the crux of these assignments. 
+However, the rest of the quiz does not respond to the user's clicks.  I wish I had a reliable answer to my problem but I think my research skills have improved as a result of this work and I think that is really the crux of these assignments. 
 
